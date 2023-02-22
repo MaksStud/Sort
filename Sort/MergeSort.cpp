@@ -8,37 +8,37 @@ void merge(int arr[], int start, int mid, int end) {
     int size1 = mid - start + 1;
     int size2 = end - mid;
 
-    int* arrL = new int[size1];
-    int* arrR = new int[size2];
+    int* arrStartMid = new int[size1];
+    int* arrMidEnd = new int[size2];
 
     for (i = 0; i < size1; i++)
-        arrL[i] = arr[start + i];
+        arrStartMid[i] = arr[start + i];
     for (j = 0; j < size2; j++)
-        arrR[j] = arr[mid + 1 + j];
+        arrMidEnd[j] = arr[mid + 1 + j];
 
     i = 0;
     j = 0;
     k = start;
     while (i < size1 && j < size2) {
-        if (arrL[i] <= arrR[j]) {
-            arr[k] = arrL[i];
+        if (arrStartMid[i] <= arrMidEnd[j]) {
+            arr[k] = arrStartMid[i];
             i++;
         }
         else {
-            arr[k] = arrR[j];
+            arr[k] = arrMidEnd[j];
             j++;
         }
         k++;
     }
 
     while (i < size1) {
-        arr[k] = arrL[i];
+        arr[k] = arrStartMid[i];
         i++;
         k++;
     }
 
     while (j < size2) {
-        arr[k] = arrR[j];
+        arr[k] = arrMidEnd[j];
         j++;
         k++;
     }
