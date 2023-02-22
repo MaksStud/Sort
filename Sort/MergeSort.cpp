@@ -55,14 +55,3 @@ int* mergeSort(int arr[], int left, int right) {
     return arr;
 }
 
-bool mergeSortTest(int* test_array, int* check_array, int size) {
-    for (int i = 0; i < size; i++) {
-        if (test_array[i] != check_array[i]) {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-}
