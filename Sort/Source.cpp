@@ -15,15 +15,35 @@ int main() {
     print(arr1Not, 7);
     cout << endl;
 
-    randomSort(arr1Not, 7);
+    mergeSort(arr1Not, 0, 7 - 1);
 
-    cout << "Sort array: ";
+    cout << "merge Sort array: ";
     print(arr1Not, 7);
     cout << endl;
 
 
     cout << "Sort Test: ";
     cout << SortTest(arr1Not, arr1, 7);
+    cout << endl;
+
+    cout << "-------------------------------------------------------- " << endl;
+
+    int arr2[5] = { -2, -1, 0, 1, 2 };
+    int arr2Not[5] = { 0, 1, -1, -2, 2 };
+
+    cout << "Enter array: ";
+    print(arr2Not, 5);
+    cout << endl;
+
+    randomSort(arr2Not, 5);
+
+    cout << "Random Sort array: ";
+    print(arr2Not, 5);
+    cout << endl;
+
+
+    cout << "Sort Test: ";
+    cout << SortTest(arr2Not, arr2, 5);
     cout << endl;
 
     system("pause");
